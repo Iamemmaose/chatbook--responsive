@@ -861,6 +861,9 @@ select {
         justify-content: space-between;
         margin-bottom: 5px;
     }
+    .setting-menu {
+        top: 90px;
+    }
 }
 
 @media (max-width: 525px) {
