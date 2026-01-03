@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbook - project</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/1d301c25ce.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!--header-->
+    <header>
+        <div class="nav-left">
+            <h1 class="logo"><span>C</span>hatbook</h1>
+            <ul class="nav-icon">
+                <li><img src="images/bell-regular-full.svg" alt="Notifications"></li>
+                <li><img src="images/envelope-regular-full.svg" alt="Messages"></li>
+                <li><img src="images/tv-solid-full.svg" alt="TV"></li>
+            </ul>
+        </div>
+
+        <div class="nav-right">
+            <div class="search-box">
+                <img src="images/search.png">
+                <input type="text" placeholder="Search">
+            </div>
+
+            <div class="profile-image online-status" onclick="settingMenuToggle()">
+                <img src="images/profile.jpg" alt="Profile Image">
+            </div>
+
+            <!--settings menu-->
+            <div class="setting-menu">
+
+                <div id = "dark-btn" class="dark-btn-on">
+                    <span></span>
+                </div>
+
+                <div class="setting-menu-container">
+                    <div class="setting-details">
+                        <img src="images/profile.jpg" alt="Profile Image">
+                        <div class="setting-user-details">
+                            <h2>Emma Ose</h2>
+                            <a href="#">See your profile</a>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="setting-details">
+                        <div class="icon-settings">
+                            <i class="fa-solid fa-message"></i>
+                        </div>
+                        <div class="setting-user-details">
+                            <h2>Give Feedback</h2>
+                            <a href="#">Help us to improve the new design</a>
+                        </div>
+                    </div>
+                    <hr>
+                   
+                    <div class="setting-link">
+                        <div class="icon-settings">
+                            <i class="fa-solid fa-gear"></i>
+                        </div>
+                        <div class="link-profile">
+                            <h2>Settings & Privacy</h2>
+                            <i class="fa-solid fa-angle-right"></i>
+                        </div>
+                    </div>
+                    <div class="setting-link">
+                        <div class="icon-settings">
+                            <i class="fa-solid fa-circle-question"></i>
+                        </div>
+                        <div class="link-profile">
+                            <h2>Help & Support</h2>
+                            <i class="fa-solid fa-angle-right"></i>
+                        </div>
+                    </div>
+                    <div class="setting-link">
+                        <div class="icon-settings">
+                            <i class="fa-solid fa-moon"></i>
+                        </div>
+                        <div class="link-profile">
+                            <h2>Display & Accessibility</h2>
+                            <i class="fa-solid fa-angle-right"></i>
+                        </div>
+                    </div>
+                    <div class="setting-link">
+                        <div class="icon-settings">
+                            <i class="fa-solid fa-power-off"></i>
+                        </div>
+                        <div class="link-profile">
+                            <h2>Logout</h2>
+                            <i class="fa-solid fa-angle-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </header>
+
+    <!--main-body-->
+    <div class="container">
+        <!--left side bar-->
+        <div class="left-side-bar">
+            <div class="imp-link">
+                <a href="#"><i class="fa-regular fa-square icon"></i>Latest News</a>
+                <a href="#"><i class="fa-solid fa-users icon"></i>Friends</a>
+                <a href="#"><i class="fa-solid fa-people-group icon"></i>Groups</a>
+                <a href="#"><i class="fa-solid fa-cart-shopping icon"></i>Marketplace</a>
+                <a href="#"><i class="fa-solid fa-tv icon"></i>Watch</a>
+                <a class="bar-link" href="#">See more</a>
+            </div>
+            <div class="shortcut-link">
+                <h2>Your Shortcuts</h2>
+                <a href="#"><img src="images/bg1.jpg">Web Developer</a>
+                <a href="#"><img src="images/testi2.jpg">Web Designer</a>
+                <a href="#"><img src="images/profile-1.jpg">Full Stack Developer</a>
+                <a href="#"><img src="images/photo-5.jpeg">Mobile Developer</a>
+            </div>
+        </div>
+
+        <!--main content-->
+        <div class="main-content">
+            <div class="story-gallery">
+                <div class="story story1">
+                    <i class="fa-solid fa-circle-plus"></i>
+                    <p>Post Story</p>
+                </div>
+                <div class="story story2">
+                    <div class="story2-pic"></div>
+                    <p>Allison</p>
+                </div>
+                <div class="story story3">
+                    <div class="story3-pic"></div>
+                    <p>Paula</p>
+                </div>
+                <div class="story story4">
+                    <div class="story4-pic"></div>
+                    <p>Charity</p>
+                </div>
+                <div class="story story5">
+                    <div class="story5-pic"></div>
+                    <p>Charles</p>
+                </div>
+            </div>
+
+            <!-- Write Post Container -->
+            <div class="write-post-container">
+                <div class="user-profile">
+                    <img src="images/profile.jpg" alt="Profile Image">
+                    <div class="user-details">
+                        <h2>Emma Ose</h2>
+                        <div class="user-status">
+                            <select>
+                                <option value="public">Public</option>
+                                <option value="friends">Friends</option>
+                                <option value="only-me">Only Me</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="post-area">
+                    <textarea rows="3" placeholder="What's on your mind, Emma?"></textarea>
+                    <div class="post-link">
+                        <a href="#"><i class="fa-solid fa-video"></i>Live Video</a>
+                        <a href="#"><i class="fa-solid fa-camera"></i>Photo/Video</a>
+                        <a href="#"><i class="fa-solid fa-face-smile"></i>Feeling/Activity</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-container">
+                <div class="user-profile">
+                    <img src="images/profile.jpg" alt="Profile Image">
+                    <div class="user-details details">
+                        <h2>Emma Ose</h2>
+                        <span>January 01 2026, 12:00am</span>
+                    </div>
+                    <div class="post-option">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+                <p>I help service based business build trust online and get more bookings by building high converting
+                    website and providing solutions and a seamless user experience. <a
+                        href="https://linkedin.com/in/emma-ose-43ab84385" target="_blank">My-Linkedin-Profile</a> </p>
+
+                <img class="post-image" src="images/profile-1.jpg" alt="Post Image">
+
+                <div class="post-activity post1">
+                    <div class="activity-area">
+                        <a href="#"><i class="fa-solid fa-thumbs-up"></i><span class="area1">john and 20
+                                others</span></a>
+                    </div>
+                    <div class="activity-profile">
+                        <a href="#"><i class="fa-solid fa-comment"></i><span class="area1">50 Comments</span> </a>
+                        <a href="#"><i class="fa-solid fa-share"></i><span class="area1">5 Share</span></a>
+                    </div>
+                </div>
+
+                <div class="post-activity">
+                    <div class="activity">
+                        <a href="#"><i class="fa-solid fa-thumbs-up"></i>Like</a>
+                        <a href="#"><i class="fa-solid fa-comment"></i>Comments</a>
+                        <a href="#"><i class="fa-solid fa-share"></i>Share</a>
+                    </div>
+                    <div class="activity-profile">
+                        <img src="images/profile.jpg"><i class="fa-solid fa-caret-down"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="post-container">
+                <div class="user-profile">
+                    <img src="images/photo-2.jpeg" alt="Profile Image">
+                    <div class="user-details details">
+                        <h2>Charity Benson</h2>
+                        <span>December 31 2025, 09:24am</span>
+                    </div>
+                    <div class="post-option">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+                <p>I help service based business build trust online and get more bookings by building high converting
+                    website and providing solutions and a seamless user experience. <a
+                        href="https://linkedin.com/in/emma-ose-43ab84385" target="_blank">My-Linkedin-Profile</a> </p>
+
+                <img class="post-image" src="images/photo-7.jpeg" alt="Post Image">
+
+                <div class="post-activity post1">
+                    <div class="activity-area">
+                        <a href="#"><i class="fa-solid fa-thumbs-up"></i><span class="area1">Denzel and 15
+                                others</span></a>
+                    </div>
+                    <div class="activity-profile">
+                        <a href="#"><i class="fa-solid fa-comment"></i><span class="area1">35 Comments</span> </a>
+                        <a href="#"><i class="fa-solid fa-share"></i><span class="area1">45 Share</span></a>
+                    </div>
+                </div>
+
+                <div class="post-activity">
+                    <div class="activity">
+                        <a href="#"><i class="fa-solid fa-thumbs-up"></i>Like</a>
+                        <a href="#"><i class="fa-solid fa-comment"></i>Comments</a>
+                        <a href="#"><i class="fa-solid fa-share"></i>Share</a>
+                    </div>
+                    <div class="activity-profile">
+                        <img src="images/photo-2.jpeg"><i class="fa-solid fa-caret-down"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="post-container">
+                <div class="user-profile">
+                    <img src="images/photo-1.jpeg" alt="Profile Image">
+                    <div class="user-details details">
+                        <h2>Allison Johnson</h2>
+                        <span>November 24 2025, 5:42pm</span>
+                    </div>
+                    <div class="post-option">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+                <p>I help service based business build trust online and get more bookings by building high converting
+                    website and providing solutions and a seamless user experience. <a
+                        href="https://linkedin.com/in/emma-ose-43ab84385" target="_blank">My-Linkedin-Profile</a> </p>
+
+                <img class="post-image" src="images/photo-6.jpeg" alt="Post Image">
+
+                <div class="post-activity post1">
+                    <div class="activity-area">
+                        <a href="#"><i class="fa-solid fa-thumbs-up"></i><span class="area1">Elizabeth and 90
+                                others</span></a>
+                    </div>
+                    <div class="activity-profile">
+                        <a href="#"><i class="fa-solid fa-comment"></i><span class="area1">40 Comments</span> </a>
+                        <a href="#"><i class="fa-solid fa-share"></i><span class="area1">10 Share</span></a>
+                    </div>
+                </div>
+
+                <div class="post-activity">
+                    <div class="activity">
+                        <a href="#"><i class="fa-solid fa-thumbs-up"></i>Like</a>
+                        <a href="#"><i class="fa-solid fa-comment"></i>Comments</a>
+                        <a href="#"><i class="fa-solid fa-share"></i>Share</a>
+                    </div>
+                    <div class="activity-profile">
+                        <img src="images/photo-1.jpeg"><i class="fa-solid fa-caret-down"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="post-container">
+                <div class="user-profile">
+                    <img src="images/photo-3.jpeg" alt="Profile Image">
+                    <div class="user-details details">
+                        <h2>Paula Elizabeth</h2>
+                        <span>November 01 2025, 8:15pm</span>
+                    </div>
+                    <div class="post-option">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+                <p>I help service based business build trust online and get more bookings by building high converting
+                    website and providing solutions and a seamless user experience. <a
+                        href="https://linkedin.com/in/emma-ose-43ab84385" target="_blank">My-Linkedin-Profile</a> </p>
+
+                <img class="post-image" src="images/premium_photo-2.jpeg" alt="Post Image">
+
+                <div class="post-activity post1">
+                    <div class="activity-area">
+                        <a href="#"><i class="fa-solid fa-thumbs-up"></i><span class="area1">Benson and 10
+                                others</span></a>
+                    </div>
+                    <div class="activity-profile">
+                        <a href="#"><i class="fa-solid fa-comment"></i><span class="area1">5 Comments</span> </a>
+                        <a href="#"><i class="fa-solid fa-share"></i><span class="area1">2 Share</span></a>
+                    </div>
+                </div>
+                <div class="post-activity">
+                    <div class="activity">
+                        <a href="#"><i class="fa-solid fa-thumbs-up"></i>Like</a>
+                        <a href="#"><i class="fa-solid fa-comment"></i>Comments</a>
+                        <a href="#"><i class="fa-solid fa-share"></i>Share</a>
+                    </div>
+                    <div class="activity-profile">
+                        <img src="images/photo-3.jpeg"><i class="fa-solid fa-caret-down"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="post-container">
+                <div class="user-profile">
+                    <img src="images/premium_photo-1.jpeg" alt="Profile Image">
+                    <div class="user-details details">
+                        <h2>Charles Washington</h2>
+                        <span>October 29 2025, 3:04am</span>
+                    </div>
+                    <div class="post-option">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+                <p>I help service based business build trust online and get more bookings by building high converting
+                    website and providing solutions and a seamless user experience. <a
+                        href="https://linkedin.com/in/emma-ose-43ab84385" target="_blank">My-Linkedin-Profile</a> </p>
+
+                <img class="post-image" src="images/photo-4.jpeg" alt="Post Image">
+
+                <div class="post-activity post1">
+                    <div class="activity-area">
+                        <a href="#"><i class="fa-solid fa-thumbs-up"></i><span class="area1">Ben and 8 others</span></a>
+                    </div>
+                    <div class="activity-profile">
+                        <a href="#"><i class="fa-solid fa-comment"></i><span class="area1">30 Comments</span> </a>
+                        <a href="#"><i class="fa-solid fa-share"></i><span class="area1">3 Share</span></a>
+                    </div>
+                </div>
+                <div class="post-activity">
+                    <div class="activity">
+                        <a href="#"><i class="fa-solid fa-thumbs-up"></i>Like</a>
+                        <a href="#"><i class="fa-solid fa-comment"></i>Comments</a>
+                        <a href="#"><i class="fa-solid fa-share"></i>Share</a>
+                    </div>
+                    <div class="activity-profile">
+                        <img src="images/premium_photo-1.jpeg"><i class="fa-solid fa-caret-down"></i>
+                    </div>
+                </div>
+            </div>
+
+            <button class="load-more-btn">Load More</button>
+        </div>
+
+
+
+        <!--right bar-->
+        <div class="right-side-bar">
+            <div class="event">
+                <div class="event-title">
+                    <h2>Events</h2>
+                    <a class="bar-link" href="#">See All</a>
+                </div>
+
+                <div class="event-list">
+                    <div class="left-event">
+                        <h3>18</h3>
+                        <p>August</p>
+                    </div>
+                    <div class="right-event">
+                        <h3>Social Media</h3>
+                        <p><i class="fa-solid fa-location-dot"></i>Lagos Street</p>
+                        <a class="bar-link" href="#">More Info</a>
+                    </div>
+                </div>
+                <div class="event-list">
+                    <div class="left-event">
+                        <h3>13</h3>
+                        <p>December</p>
+                    </div>
+                    <div class="right-event">
+                        <h3>Technology</h3>
+                        <p><i class="fa-solid fa-location-dot"></i>Abuja Street</p>
+                        <a class="bar-link" href="#">More Info</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="event">
+                <div class="event-title">
+                    <h2>Advertisement</h2>
+                    <a class="bar-link" href="#">Close</a>
+                </div>
+
+                <img src="images/premium_photo-3.jpeg" alt="Advertisement Image">
+            </div>
+
+            <div class="event">
+                <div class="event-title">
+                    <h2>Conversations</h2>
+                    <a class="bar-link" href="#">Hide Chat</a>
+                </div>
+
+                <div class="online-list">
+                    <div class="profile-image2 online-status">
+                        <img src="images/photo-1.jpeg" alt="Profile Image">
+                    </div>
+                    <p>Allison Johnson</p>
+                </div>
+                <div class="online-list">
+                    <div class="profile-image2 online-status">
+                        <img src="images/photo-3.jpeg" alt="Profile Image">
+                    </div>
+                    <p>Paula Elizabeth</p>
+                </div>
+                <div class="online-list">
+                    <div class="profile-image2 online-status">
+                        <img src="images/photo-2.jpeg" alt="Profile Image">
+                    </div>
+                    <p>Charity Benson</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Copyright &copy; 2026 Chatbook. All rights reserved.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
